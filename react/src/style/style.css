@@ -1,0 +1,36 @@
+.div_Quadrado{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+}
+
+.flex_container{
+    background-color: blue;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_div1, .flex_div2, .flex_div3{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: antiquewhite;
+}
+
+.barrazul_container{
+    background-color: brown;
+    width: 500px;
+    height: 200px;
+    display: flex;
+    flex-direction:row;
+}
+
+.barrazul_div1, .barrazul_div3{
+
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: gold;
+}
