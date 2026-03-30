@@ -8,6 +8,8 @@ import Flex from './pagina/flex'
 import './App.css' 
 import './pagina/barrazul'
 import Barrazul from './pagina/barrazul'
+import Quartafalta from './pagina/quartafalta'
+import Pansexual from './pagina/pansexual'
 
 
 
@@ -17,10 +19,12 @@ function App() {
 
   return (
     <>
-      <Cabecalho/>
+   <Pansexual/>
+      {/* <Cabecalho/>
       <Quadrado/>
       <Flex/>
-      <Barrazul/>
+      <Barrazul/> */}
+      {/* <Quartafalta/> */}
             {/* <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />

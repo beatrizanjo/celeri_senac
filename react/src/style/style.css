@@ -34,3 +34,62 @@
     margin: 10px;
     background-color: gold;
 }
+
+.d_container{
+    width: 900px;
+    height: 450px;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+}
+
+.d_div_1, .d_div_2{
+    width: 25%;
+    height: 100%;
+    background-color: green;
+}
+
+.d_div_1{
+
+}
+
+.d_div_2{
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+}
+
+.d_div_amarelo{
+    height: 33%;
+    width: 100%;
+    background-color: yellow;
+}
+
+.pansexual{
+    width: 900px;
+    height: 450px;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    border-top: 10px solid black;
+    border-right: 10px solid black;
+    border-left: 10px solid black
+}
+
+.amarelo{
+    height: 66%;
+    width: 100%;
+    background-color: yellow;
+        border-bottom: 10px solid black;
+
+}
+
+.azul{
+    height:50%;
+    width: 100%;
+    background-color: pink;
+    flex-direction: column;
+        border-bottom: 10px solid black;
+
+
+}
