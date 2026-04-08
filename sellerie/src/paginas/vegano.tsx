@@ -1,14 +1,11 @@
-
 function Vegano() {
 
     return (
-
         <div className='Vegano'>
-            <h1>Vegano</h1>
+                <h1>Vegano</h1>
 
-        </div>
+            </div>
     )
-
 
 
 

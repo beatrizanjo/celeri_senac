@@ -1,8 +1,9 @@
 import {Route, Routes} from 'react-router-dom';
+import Cabecalho from './componentes/cabecalho';
+import Navegacao from './componentes/navegacao';
 import Home from './paginas/home.tsx';
 import Timer from './paginas/timer.tsx';
 import Vegano from './paginas/vegano.tsx';
-import Sobremesas from './paginas/sobremesas.tsx';
 import Bebidas from './paginas/bebidas.tsx';
 import Cadastro from './paginas/cadastro.tsx';
 import Vegetariano from './paginas/vegetariano.tsx';
@@ -20,10 +21,11 @@ import Notfound from './paginas/notfound.tsx';
 function App() {
   return (
   <>
+      <Cabecalho />
+      <Navegacao />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/vegano" element={<Vegano />} />
-        <Route path="/sobremesas" element={<Sobremesas />} />
         <Route path="/bebidas" element={<Bebidas />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/vegetariano" element={<Vegetariano />} />
@@ -42,6 +44,4 @@ function App() {
   )
 }
 
-export default App;
-
-  
+export default App;  

@@ -1,0 +1,175 @@
+/* Cabeçalho global - usado pelo componente Cabecalho */
+.cabecalho {
+    background: #ffffff;
+    padding: 10px 16px;
+    box-shadow: 0 1px 4px rgba(16, 24, 40, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.cabecalho__inner {
+    margin: 0;
+    padding: 0 16px;
+    display: grid;
+    /* left column fixed to logo width (160px), middle flexible, right for actions */
+    grid-template-columns: 160px 1fr auto; /* logo | search | actions */
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cabecalho__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: start; /* garante que fique no canto esquerdo */
+    width: 160px; /* ajustado para logo maior */
+    height: 160px;
+}
+
+.cabecalho__logo img {
+    height: 160px; /* aumentado para web */
+    max-height: 160px;
+    width: auto;
+    display: block;
+}
+
+.cabecalho__search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-self: center; /* centraliza na coluna do grid */
+    width: 100%;
+    max-width: 640px; /* controla largura da barra de pesquisa */
+}
+
+.cabecalho__search input {
+    flex: 1;
+    /* altura proporcional à logo 160px: 60px */
+    height: 60px;
+    padding: 0 16px; /* zero vertical padding para usar altura fixa */
+    border-radius: 999px;
+    border: 1px solid #e6e6e6;
+    background: #f6f6f6;
+    outline: none;
+    font-size: 16px;
+    line-height: 60px; /* centraliza o texto verticalmente */
+    box-sizing: border-box;
+}
+
+.cabecalho__search input:focus {
+    box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.08);
+    border-color: rgba(255, 122, 0, 0.8);
+}
+
+.cabecalho__search button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px; /* proporcional à logo */
+    padding: 0 12px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: #ff7a00;
+    font-size: 32px;
+    cursor: pointer;
+    min-width: 48px;
+}
+
+.cabecalho__search button svg {
+    height: 32px;
+    width: 32px;
+    stroke: #ff7a00;
+    color: #ff7a00;
+}
+
+.cabecalho__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: end; /* garante que fique no canto direito */
+}
+
+.cabecalho__actions img {
+    height: 50px;
+    width: auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+    .cabecalho {
+        padding: 6px 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .cabecalho__inner {
+        gap: 4px;
+        padding: 0 6px;
+        /* No mobile: reduz logo para 70px, deixa espaço para pesquisa */
+        grid-template-columns: 70px 1fr 48px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* mobile: logo reduzido para 70px */
+    .cabecalho__logo {
+        width: 70px;
+        min-width: 70px;
+        height: 70px;
+    }
+
+    .cabecalho__logo img {
+        height: 70px;
+        max-height: 70px;
+    }
+
+    .cabecalho__search {
+        max-width: none;
+        width: 100%;
+        gap: 4px;
+    }
+
+    /* mobile: input proporcional (44px) */
+    .cabecalho__search input {
+        height: 44px;
+        line-height: 44px;
+        font-size: 12px;
+        padding: 0 10px;
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    .cabecalho__search button {
+        height: 44px;
+        width: 44px;
+        padding: 0;
+        font-size: 24px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+    }
+
+    .cabecalho__search button svg {
+        height: 24px;
+        width: 24px;
+        stroke: #ff7a00;
+        color: #ff7a00;
+    }
+
+    .cabecalho__actions {
+        min-width: 48px;
+    }
+
+    .cabecalho__actions img {
+        height: 48px;
+        width: auto;
+    }
+}
