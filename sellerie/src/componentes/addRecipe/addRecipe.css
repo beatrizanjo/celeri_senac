@@ -1,0 +1,7 @@
+.add-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;z-index:1200}
+.add-modal{background:#fff;padding:20px;border-radius:10px;width:420px;max-width:95%;position:relative}
+.add-close{position:absolute;right:12px;top:12px;border:none;background:transparent;font-size:18px;cursor:pointer}
+.add-form{display:flex;flex-direction:column;gap:10px}
+.add-form input,.add-form textarea{padding:10px;border:1px solid #ddd;border-radius:6px}
+.add-form button{background:#ff8a00;color:#fff;border:none;padding:10px;border-radius:6px;cursor:pointer}
+.add-error{color:#c00}
