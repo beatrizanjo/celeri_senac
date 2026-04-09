@@ -1,4 +1,4 @@
-import {Route, Routes} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Cabecalho from './componentes/cabecalho';
 import Navegacao from './componentes/navegacao';
 import Home from './paginas/home.tsx';
@@ -22,7 +22,7 @@ import ProtectedRoute from './routes/ProtectedRoute'
 
 function App() {
   return (
-  <>
+    <>
       <AuthProvider>
         <Cabecalho />
         <Navegacao />
@@ -48,7 +48,7 @@ function App() {
         </Routes>
       </AuthProvider>
 
-  </>
+    </>
 
   )
 }
