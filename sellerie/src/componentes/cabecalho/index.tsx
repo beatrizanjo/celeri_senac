@@ -2,10 +2,16 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './style.css'
+import LoginModal from '../login/LoginModal'
+import AddRecipeForm from '../addRecipe/AddRecipeForm'
+import { useAuth } from '../../context/auth'
 
 function Cabecalho() {
     const [query, setQuery] = useState('')
     const navigate = useNavigate()
+    const { user, logout } = useAuth()
+    const [loginOpen, setLoginOpen] = useState(false)
+    const [addOpen, setAddOpen] = useState(false)
 
     function onSubmit(e: React.FormEvent) {
         e.preventDefault()
@@ -40,10 +46,10 @@ function Cabecalho() {
                 </form>
 
                 <div className="cabecalho__actions">
-                    <img 
-                        className="cabecalho__relogio" 
-                        src="/relogio.png" 
-                        alt="Cronômetro" 
+                    <img
+                        className="cabecalho__relogio"
+                        src="/relogio.png"
+                        alt="Cronômetro"
                         onClick={handleClockClick}
                         style={{ cursor: 'pointer' }}
                         role="button"
@@ -55,8 +61,20 @@ function Cabecalho() {
                         }}
                         aria-label="Abrir página de cronômetro"
                     />
+
+                    {user ? (
+                        <div className="header-user">
+                            <button className="btn-add" onClick={() => setAddOpen(true)}>Adicionar receita</button>
+                            <span className="user-name">Olá, {user.name}</span>
+                            <button className="btn-logout" onClick={() => logout()}>Sair</button>
+                        </div>
+                    ) : (
+                        <button className="btn-login" onClick={() => setLoginOpen(true)}>Entrar</button>
+                    )}
                 </div>
             </div>
+            <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
+            <AddRecipeForm open={addOpen} onClose={() => setAddOpen(false)} onAdded={() => window.location.reload()} />
         </header>
     )
 }
