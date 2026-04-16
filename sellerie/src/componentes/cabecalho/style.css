@@ -1,4 +1,4 @@
-/* Cabeçalho global - usado pelo componente Cabecalho */
+
 .cabecalho {
     background: #ffffff;
     padding: 10px 16px;
@@ -14,8 +14,7 @@
     margin: 0;
     padding: 0 16px;
     display: grid;
-    /* left column fixed to logo width (160px), middle flexible, right for actions */
-    grid-template-columns: 160px 1fr auto; /* logo | search | actions */
+    grid-template-columns: 160px 1fr auto; 
     align-items: center;
     gap: 16px;
     width: 100%;
@@ -26,13 +25,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-self: start; /* garante que fique no canto esquerdo */
-    width: 160px; /* ajustado para logo maior */
+    justify-self: start; 
+    width: 160px; 
     height: 160px;
 }
 
 .cabecalho__logo img {
-    height: 160px; /* aumentado para web */
+    height: 160px;
     max-height: 160px;
     width: auto;
     display: block;
@@ -42,22 +41,21 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    justify-self: center; /* centraliza na coluna do grid */
+    justify-self: center; 
     width: 100%;
-    max-width: 640px; /* controla largura da barra de pesquisa */
+    max-width: 640px; 
 }
 
 .cabecalho__search input {
     flex: 1;
-    /* altura proporcional à logo 160px: 60px */
     height: 60px;
-    padding: 0 16px; /* zero vertical padding para usar altura fixa */
+    padding: 0 16px; 
     border-radius: 999px;
     border: 1px solid #e6e6e6;
     background: #f6f6f6;
     outline: none;
     font-size: 16px;
-    line-height: 60px; /* centraliza o texto verticalmente */
+    line-height: 60px; 
     box-sizing: border-box;
 }
 
@@ -70,7 +68,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 48px; /* proporcional à logo */
+    height: 48px; 
     padding: 0 12px;
     border-radius: 8px;
     border: none;
@@ -92,7 +90,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-self: end; /* garante que fique no canto direito */
+    justify-self: end; 
     gap: 12px;
 }
 
@@ -144,7 +142,6 @@
     color: white;
 }
 
-/* Mobile adjustments */
 @media (max-width: 640px) {
     .cabecalho {
         padding: 8px 0;
@@ -155,7 +152,6 @@
     .cabecalho__inner {
         gap: 8px;
         padding: 0 8px;
-        /* No mobile: logo | search-section (search + actions em coluna) */
         grid-template-columns: 70px 1fr;
         width: 100%;
         box-sizing: border-box;
@@ -164,7 +160,6 @@
         flex-wrap: wrap;
     }
 
-    /* mobile: logo reduzido para 70px */
     .cabecalho__logo {
         width: 70px;
         min-width: 70px;
@@ -187,7 +182,6 @@
         margin-top: 8px;
     }
 
-    /* mobile: input proporcional (44px) */
     .cabecalho__search input {
         height: 44px;
         line-height: 44px;

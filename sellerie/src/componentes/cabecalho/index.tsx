@@ -17,7 +17,6 @@ function Cabecalho() {
         e.preventDefault()
         const q = query.trim()
         if (!q) return
-        // navega para uma rota de busca com query string
         navigate(`/buscar?query=${encodeURIComponent(q)}`)
     }
 

@@ -1,33 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-</head>
-<body>
-
-    <h1>Home</h1>
-    <p>Bem-vindo à página inicial!</p>
-
-    <main> 
-        <section className="banner"> 
-            <img src= "https://i.pinimg.com/1200x/19/92/e5/1992e587b26d2d9b153e0169c1139a6e.jpg"></img>
-        </section>
-    </main>
-    
-</body>
-</html>
+import "../style/style.css"
 
 
 
 
 function Home() {
     return (
-        <div> 
+        <div >
 
+            <div className="home"> </div>
+            <h1 className="escritohome">Home</h1>
+        
+           
+                <section className="banner">
+                    <img src="home.png"  alt="imagem de banner" />
+                </section>
+            
+            
+            
         </div>
     )
 }
 
 export default Home;
+
+//"https://i.pinimg.com/736x/a7/47/f6/a747f6dd1b76302b395e974f080d4de9.jpg"

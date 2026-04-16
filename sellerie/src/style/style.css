@@ -1,0 +1,40 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    width: 1000px;
+    max-width: 900px;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+/* Mobile - até 768px */
+@media (max-width: 768px) {
+    .banner img {
+        max-width: 500px;
+    }
+}
+
+/* Tablet - 769px a 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .banner img {
+        max-width: 700px;
+    }
+}
+
+/* Desktop - acima de 1024px */
+@media (min-width: 1025px) {
+    .banner img {
+        max-height: 500px;
+
+    }
+}
+
+.escritohome {
+    display: flex;
+    justify-content: center;
+}
