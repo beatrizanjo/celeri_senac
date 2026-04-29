@@ -16,6 +16,7 @@ import Principal from './paginas/principal.tsx';
 import Notfound from './paginas/notfound.tsx';
 import { AuthProvider } from './context/auth'
 import ProtectedRoute from './routes/ProtectedRoute'
+import Rodape from './componentes/rodape/index.tsx';
 
 
 
@@ -42,10 +43,13 @@ function App() {
           <Route path="/carnes" element={<ProtectedRoute><Carnes /></ProtectedRoute>} />
           <Route path="/doces" element={<ProtectedRoute><Doces /></ProtectedRoute>} />
           <Route path="/principal" element={<ProtectedRoute><Principal /></ProtectedRoute>} />
+       
 
           {/* Rota padrão */}
           <Route path="*" element={<Notfound />} />
         </Routes>
+        
+        <Rodape/>
       </AuthProvider>
 
     </>
