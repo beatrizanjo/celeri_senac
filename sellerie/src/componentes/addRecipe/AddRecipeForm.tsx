@@ -35,7 +35,6 @@ export default function AddRecipeForm({ open, onClose, onAdded }: Props) {
         }
 
         try {
-            // Tenta enviar para API pública
             const res = await fetch('https://api-receitas-pi.vercel.app/receitas', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -48,7 +47,6 @@ export default function AddRecipeForm({ open, onClose, onAdded }: Props) {
                 return
             }
 
-            // Se não for permitido, salva localmente
             const local = JSON.parse(localStorage.getItem('sellerie_userRecipes') || '[]')
             local.unshift({ id: Date.now().toString(), receita: title, ingredientes: payload.ingredientes, modo_preparo: modo, link_imagem: image, tipo: category })
             localStorage.setItem('sellerie_userRecipes', JSON.stringify(local))
