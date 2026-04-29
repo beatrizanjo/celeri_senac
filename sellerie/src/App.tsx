@@ -5,7 +5,6 @@ import Home from './paginas/home.tsx';
 import Timer from './paginas/timer.tsx';
 import Vegano from './paginas/vegano.tsx';
 import Bebidas from './paginas/bebidas.tsx';
-import Cadastro from './paginas/cadastro.tsx';
 import Vegetariano from './paginas/vegetariano.tsx';
 import Salada from './paginas/salada.tsx';
 import Massas from './paginas/massas.tsx';
@@ -13,6 +12,8 @@ import Lanches from './paginas/lanches.tsx';
 import Carnes from './paginas/carnes.tsx';
 import Doces from './paginas/doces.tsx';
 import Principal from './paginas/principal.tsx';
+import RecipeDetail from './paginas/recipeDetail.tsx';
+import Search from './paginas/search.tsx';
 import Notfound from './paginas/notfound.tsx';
 import { AuthProvider } from './context/auth'
 import ProtectedRoute from './routes/ProtectedRoute'
@@ -29,7 +30,7 @@ function App() {
         <Routes>
           {/* Rotas públicas */}
           <Route path="/" element={<Home />} />
-          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/buscar" element={<ProtectedRoute><Search /></ProtectedRoute>} />
 
           {/* Rotas protegidas - requer login */}
           <Route path="/vegano" element={<ProtectedRoute><Vegano /></ProtectedRoute>} />
@@ -42,6 +43,9 @@ function App() {
           <Route path="/carnes" element={<ProtectedRoute><Carnes /></ProtectedRoute>} />
           <Route path="/doces" element={<ProtectedRoute><Doces /></ProtectedRoute>} />
           <Route path="/principal" element={<ProtectedRoute><Principal /></ProtectedRoute>} />
+
+          {/* Rota de detalhes da receita */}
+          <Route path="/recipe/:id/:isDrink" element={<ProtectedRoute><RecipeDetail /></ProtectedRoute>} />
 
           {/* Rota padrão */}
           <Route path="*" element={<Notfound />} />

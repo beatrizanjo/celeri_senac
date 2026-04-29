@@ -83,3 +83,12 @@
     font-family: "Great Vibes", cursive;
     font-size: 50px;
 }
+
+/* Centralizar títulos de páginas */
+h1 {
+    text-align: center;
+    margin: 30px 0 20px 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+}
